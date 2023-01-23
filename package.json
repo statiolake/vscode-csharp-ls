@@ -2,6 +2,7 @@
   "name": "vscode-csharp-ls",
   "displayName": "vscode-csharp-ls",
   "description": "VSCode Integration for csharp-ls language server",
+  "publisher": "statiolake",
   "version": "0.1.1",
   "engines": {
     "vscode": "^1.74.0"
