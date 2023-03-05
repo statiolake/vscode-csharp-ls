@@ -19,12 +19,17 @@
   "contributes": {
     "configuration": [
       {
-        "title": "csharp-lsj",
+        "title": "csharp-ls",
         "properties": {
           "csharp-ls.server.path": {
             "type": "string",
             "default": "csharp-ls",
             "description": "Path to clang-ls language server."
+          },
+          "csharp-ls.solution.path": {
+            "type": "string",
+            "default": null,
+            "description": "Path to solution file to open."
           }
         }
       }

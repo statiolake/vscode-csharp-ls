@@ -10,9 +10,17 @@ let client: LanguageClient;
 export function activate(context: ExtensionContext) {
   const config = workspace.getConfiguration("csharp-ls");
   const serverPath = config.get<string>("server.path")!;
+  const solutionPath = config.get<string>("solution.path");
+
+  const args = [];
+  if (solutionPath) {
+    args.push("-s");
+    args.push(solutionPath);
+  }
 
   const serverOptions: ServerOptions = {
-    command: serverPath
+    command: serverPath,
+    args
   };
 
   const clientOptions: LanguageClientOptions = {
